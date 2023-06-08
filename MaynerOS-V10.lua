@@ -105,6 +105,12 @@ drawButton(24, 5, 12, 3, "Snake", 0xFFFFFF, 0x555555)
 -- Выводим кнопку для запуска файла "files.lua"
 drawButton(38, 5, 12, 3, "File Manger", 0xFFFFFF, 0x555555)
 
+-- Выводим нижнюю полоску с надписью "Mayner OS"
+gpu.setBackground(0xFFFFFF)
+gpu.setForeground(0x000000)
+gpu.fill(1, 23, 80, 2, " ")
+gpu.set(34, 24, "Mayner OS")
+
 -- Ожидаем нажатия кнопки
 while true do
   local _, _, x, y = event.pull("touch")
