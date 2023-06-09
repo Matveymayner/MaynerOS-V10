@@ -88,12 +88,12 @@ end
 
 -- Функция для запуска игры Flappy Bird
 local function runFlappyBird()
-shell.execute("flappybird.lua")
+      shell.execute("flappybird.lua")
 end
 
 -- Функция для запуска игры Snake
 local function runSnake()
-shell.execute("Snake.lua")
+      shell.execute("Snake.lua")
 end
 
 -- Очищаем экран
