@@ -45,7 +45,7 @@ local function handleCommand(command)
     message("Are you sure you want to delete the OS? (y/n)")
     local _, _, _, _, _, response = event.pull("key_down")
     if response == 21 then
-      os.execute("rm /MaynerOS-V7.lua")
+      os.execute("rm /MaynerOS-V10.lua")
       os.execute("rm /autorun.lua")
     else
       message("OS delete aborted.")
@@ -88,12 +88,12 @@ end
 
 -- Функция для запуска игры Flappy Bird
 local function runFlappyBird()
-  -- Add your Flappy Bird game code here
+shell.execute("flappybird.lua")
 end
 
 -- Функция для запуска игры Snake
 local function runSnake()
-  -- Add your Snake game code here
+shell.execute("Snake.lua")
 end
 
 -- Очищаем экран
