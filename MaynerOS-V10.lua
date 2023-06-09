@@ -75,15 +75,25 @@ local function handleCommand(command)
   elseif command == "Flappy Bird" then
     message("Starting Flappy Bird...")
     os.sleep(2)
-    shell.execute("Flappy.lua")
+    runFlappyBird()
   elseif command == "Snake" then
     message("Starting Snake...")
     os.sleep(2)
-    shell.execute("Snake.lua")
+    runSnake()
   else
     message("Invalid command.")
     os.sleep(2)
   end
+end
+
+-- Функция для запуска игры Flappy Bird
+local function runFlappyBird()
+  -- Add your Flappy Bird game code here
+end
+
+-- Функция для запуска игры Snake
+local function runSnake()
+  -- Add your Snake game code here
 end
 
 -- Очищаем экран
@@ -130,9 +140,9 @@ while true do
   elseif y == 5 then
     -- Обработка команд для второго ряда кнопок
     if x >= 10 and x <= 21 then
-      runFlappyBird()
+      handleCommand("Flappy Bird")
     elseif x >= 24 and x <= 35 then
-      runSnake()
+      handleCommand("Snake")
     elseif x >= 38 and x <= 49 then
       shell.execute("files.lua")
     end
