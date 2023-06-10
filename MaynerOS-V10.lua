@@ -140,9 +140,9 @@ while true do
   elseif y == 5 then
     -- Обработка команд для второго ряда кнопок
     if x >= 10 and x <= 21 then
-      handleCommand("Flappy Bird")
+      shell.execute("Flappy Bird")
     elseif x >= 24 and x <= 35 then
-      handleCommand("Snake")
+      shell.execute("Snake")
     elseif x >= 38 and x <= 49 then
       shell.execute("files.lua")
     end
